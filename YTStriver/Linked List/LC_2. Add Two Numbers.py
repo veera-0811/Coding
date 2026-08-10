@@ -23,3 +23,8 @@ class Solution:
             if l2 is not None:
                 l2 = l2.next
         return dummy.next
+
+'''
+Input: l1 = [2,4,3], l2 = [5,6,4]
+Output: [7,0,8]
+'''
