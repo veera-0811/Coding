@@ -1,3 +1,8 @@
+# Key Idea:
+# 1. Find the middle of the linked list using slow and fast pointers.
+# 2. Reverse the second half of the linked list.
+# 3. Merge the first half and the reversed second half.
+
 # Definition for singly-linked list.
 from typing import Optional
 class ListNode:
