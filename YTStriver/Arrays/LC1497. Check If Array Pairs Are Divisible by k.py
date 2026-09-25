@@ -29,3 +29,10 @@ class Solution:
                 if d[r] != d.get(k-r,0):
                     return False
         return True
+
+
+# Example usage
+arr = [1,2,3,4,5,10,6,7,8,9]          # Output: True
+k = 5
+print(Solution().canArrange(arr, k))
+# Explanation: Pairs are (1,9),(2,8),(3,7),(4,6) and (5,10).
