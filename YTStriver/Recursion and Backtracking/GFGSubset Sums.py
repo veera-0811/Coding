@@ -1,3 +1,4 @@
+# Approach: Backtracking            Time Complexity: O(2^n)  Space Complexity: O(n)
 class Solution:
 	def subsetSums(self, arr):
 		n = len(arr)
