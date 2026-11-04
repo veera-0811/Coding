@@ -1,5 +1,7 @@
-# Approach: Backtracking            Time Complexity: O(2^n)  Space Complexity: O(n)
 class Solution:
+    
+# Approach: Backtracking            Time Complexity: O(2^n)  Space Complexity: O(n)
+
     def subsetsWithDup(self, nums: list[int]) -> list[list[int]]:        
         n = len(nums)
         nums.sort()
@@ -18,5 +20,21 @@ class Solution:
         helper(0,[])
         return res
 
+# Approach: Backtracking using For Loop           Time Complexity: O(2^n)*O(n)  Space Complexity: O(n)
+
+    def subsetsWithDup1(self, nums: list[int]) -> list[list[int]]:        
+        n = len(nums)
+        nums.sort()
+        res = []
+        def helper(ind,temp):
+            res.append(temp.copy())
+            for i in range(ind,n):
+                 if i > ind and nums[i] == nums[i-1]:continue
+                 temp.append(nums[i])
+                 helper(i+1,temp)
+                 temp.pop()
+        helper(0,[])
+        return res
+
 nums = [1,2,2]              # Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
-print(Solution().subsetsWithDup(nums))
+print(Solution().subsetsWithDup1(nums))
