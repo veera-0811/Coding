@@ -29,7 +29,7 @@ class Solution:
         
         def helper(ind,nums,res):
             if ind == n:
-                temp = []
+                temp = []                           # Simply write res.append(nums.copy()) instead of creating a new list and appending elements one by one.
                 for i in range(n):
                     temp.append(nums[i])
                 res.append(temp)
