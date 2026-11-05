@@ -1,4 +1,5 @@
 class Solution:
+    
 # Approach: Backtracking            Time Complexity: O(n!*n)  Space Complexity: O(n)
     def permute(self, nums: list[int]) -> list[list[int]]:
         n = len(nums)
